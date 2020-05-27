@@ -1,6 +1,6 @@
 ﻿namespace Browser
 {
-    partial class Form1
+    partial class AppContainer
     {
         /// <summary>
         /// Required designer variable.

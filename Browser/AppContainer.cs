@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Browser
 {
-    public partial class Form1 : Form
+    public partial class AppContainer : Form
     {
-        public Form1()
+        public AppContainer()
         {
             InitializeComponent();
         }
