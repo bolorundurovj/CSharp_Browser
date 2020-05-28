@@ -1,2 +1,2 @@
 # CSharp_Browser
-![Image of Authentication Email](./img/tokenAuth.png)
+![Image of Browser](./Assets/Annotation.png)
