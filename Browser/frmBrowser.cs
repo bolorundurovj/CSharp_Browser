@@ -39,6 +39,7 @@ namespace Browser
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             btnRefresh.Image = imgRefresh.Image;
+            txtSearchOnUrl.Text = webBrowser1.Url.AbsoluteUri;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
