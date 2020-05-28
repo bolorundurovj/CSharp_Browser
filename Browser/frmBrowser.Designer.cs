@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBrowser));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -38,6 +39,7 @@
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -81,6 +83,7 @@
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 1;
             this.bunifuImageButton1.TabStop = false;
+            this.toolTip1.SetToolTip(this.bunifuImageButton1, "Back");
             this.bunifuImageButton1.Zoom = 10;
             // 
             // bunifuImageButton2
@@ -94,6 +97,7 @@
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 2;
             this.bunifuImageButton2.TabStop = false;
+            this.toolTip1.SetToolTip(this.bunifuImageButton2, "Home");
             this.bunifuImageButton2.Zoom = 10;
             // 
             // bunifuImageButton3
@@ -107,6 +111,7 @@
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 3;
             this.bunifuImageButton3.TabStop = false;
+            this.toolTip1.SetToolTip(this.bunifuImageButton3, "Forward");
             this.bunifuImageButton3.Zoom = 10;
             // 
             // bunifuImageButton4
@@ -120,6 +125,7 @@
             this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton4.TabIndex = 4;
             this.bunifuImageButton4.TabStop = false;
+            this.toolTip1.SetToolTip(this.bunifuImageButton4, "Refresh");
             this.bunifuImageButton4.Zoom = 10;
             // 
             // bunifuTextbox1
@@ -151,6 +157,7 @@
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 7;
             this.bunifuImageButton5.TabStop = false;
+            this.toolTip1.SetToolTip(this.bunifuImageButton5, "Settings");
             this.bunifuImageButton5.Zoom = 10;
             // 
             // bunifuImageButton6
@@ -165,6 +172,7 @@
             this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton6.TabIndex = 6;
             this.bunifuImageButton6.TabStop = false;
+            this.toolTip1.SetToolTip(this.bunifuImageButton6, "Downloads");
             this.bunifuImageButton6.Zoom = 10;
             // 
             // webBrowser1
@@ -213,5 +221,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
