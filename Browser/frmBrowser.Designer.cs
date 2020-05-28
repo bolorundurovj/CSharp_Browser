@@ -37,20 +37,24 @@
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnRefresh = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnForward = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnHome = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnBack = new Bunifu.Framework.UI.BunifuImageButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.txtSearchOnUrl = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.imgRefresh = new Bunifu.Framework.UI.BunifuImageButton();
+            this.imgSpinner = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnForward)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSpinner)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -61,13 +65,13 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCards1.Controls.Add(this.bunifuTextBox1);
+            this.bunifuCards1.Controls.Add(this.txtSearchOnUrl);
             this.bunifuCards1.Controls.Add(this.bunifuImageButton5);
             this.bunifuCards1.Controls.Add(this.bunifuImageButton6);
-            this.bunifuCards1.Controls.Add(this.bunifuImageButton4);
-            this.bunifuCards1.Controls.Add(this.bunifuImageButton3);
-            this.bunifuCards1.Controls.Add(this.bunifuImageButton2);
-            this.bunifuCards1.Controls.Add(this.bunifuImageButton1);
+            this.bunifuCards1.Controls.Add(this.btnRefresh);
+            this.bunifuCards1.Controls.Add(this.btnForward);
+            this.bunifuCards1.Controls.Add(this.btnHome);
+            this.bunifuCards1.Controls.Add(this.btnBack);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(-2, 0);
             this.bunifuCards1.Name = "bunifuCards1";
@@ -106,61 +110,65 @@
             this.toolTip1.SetToolTip(this.bunifuImageButton6, "Downloads");
             this.bunifuImageButton6.Zoom = 10;
             // 
-            // bunifuImageButton4
+            // btnRefresh
             // 
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(157, 12);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 4;
-            this.bunifuImageButton4.TabStop = false;
-            this.toolTip1.SetToolTip(this.bunifuImageButton4, "Refresh");
-            this.bunifuImageButton4.Zoom = 10;
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageActive = null;
+            this.btnRefresh.Location = new System.Drawing.Point(157, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(30, 30);
+            this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnRefresh, "Refresh");
+            this.btnRefresh.Zoom = 10;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // bunifuImageButton3
+            // btnForward
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(61, 12);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton3.TabIndex = 3;
-            this.bunifuImageButton3.TabStop = false;
-            this.toolTip1.SetToolTip(this.bunifuImageButton3, "Forward");
-            this.bunifuImageButton3.Zoom = 10;
+            this.btnForward.BackColor = System.Drawing.Color.Transparent;
+            this.btnForward.Image = ((System.Drawing.Image)(resources.GetObject("btnForward.Image")));
+            this.btnForward.ImageActive = null;
+            this.btnForward.Location = new System.Drawing.Point(61, 12);
+            this.btnForward.Name = "btnForward";
+            this.btnForward.Size = new System.Drawing.Size(30, 30);
+            this.btnForward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnForward.TabIndex = 3;
+            this.btnForward.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnForward, "Forward");
+            this.btnForward.Zoom = 10;
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
-            // bunifuImageButton2
+            // btnHome
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(109, 12);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 2;
-            this.bunifuImageButton2.TabStop = false;
-            this.toolTip1.SetToolTip(this.bunifuImageButton2, "Home");
-            this.bunifuImageButton2.Zoom = 10;
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageActive = null;
+            this.btnHome.Location = new System.Drawing.Point(109, 12);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(30, 30);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.TabIndex = 2;
+            this.btnHome.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnHome, "Home");
+            this.btnHome.Zoom = 10;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // bunifuImageButton1
+            // btnBack
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(14, 12);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 30);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 1;
-            this.bunifuImageButton1.TabStop = false;
-            this.toolTip1.SetToolTip(this.bunifuImageButton1, "Back");
-            this.bunifuImageButton1.Zoom = 10;
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageActive = null;
+            this.btnBack.Location = new System.Drawing.Point(14, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(30, 30);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 1;
+            this.btnBack.TabStop = false;
+            this.toolTip1.SetToolTip(this.btnBack, "Back");
+            this.btnBack.Zoom = 10;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // webBrowser1
             // 
@@ -173,81 +181,113 @@
             this.webBrowser1.Size = new System.Drawing.Size(801, 390);
             this.webBrowser1.TabIndex = 1;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
             // 
-            // bunifuTextBox1
+            // txtSearchOnUrl
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSearchOnUrl.AcceptsReturn = false;
+            this.txtSearchOnUrl.AcceptsTab = false;
+            this.txtSearchOnUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 30;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconLeft")));
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconRight")));
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(193, 12);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.txtSearchOnUrl.AnimationSpeed = 200;
+            this.txtSearchOnUrl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSearchOnUrl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSearchOnUrl.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchOnUrl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearchOnUrl.BackgroundImage")));
+            this.txtSearchOnUrl.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSearchOnUrl.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtSearchOnUrl.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSearchOnUrl.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSearchOnUrl.BorderRadius = 30;
+            this.txtSearchOnUrl.BorderThickness = 1;
+            this.txtSearchOnUrl.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSearchOnUrl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchOnUrl.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtSearchOnUrl.DefaultText = "";
+            this.txtSearchOnUrl.FillColor = System.Drawing.Color.White;
+            this.txtSearchOnUrl.HideSelection = true;
+            this.txtSearchOnUrl.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchOnUrl.IconLeft")));
+            this.txtSearchOnUrl.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchOnUrl.IconPadding = 10;
+            this.txtSearchOnUrl.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchOnUrl.IconRight")));
+            this.txtSearchOnUrl.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchOnUrl.Lines = new string[0];
+            this.txtSearchOnUrl.Location = new System.Drawing.Point(193, 12);
+            this.txtSearchOnUrl.MaxLength = 32767;
+            this.txtSearchOnUrl.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtSearchOnUrl.Modified = false;
+            this.txtSearchOnUrl.Multiline = false;
+            this.txtSearchOnUrl.Name = "txtSearchOnUrl";
             stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties1;
+            this.txtSearchOnUrl.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.Empty;
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.OnDisabledState = stateProperties2;
+            this.txtSearchOnUrl.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties3;
+            this.txtSearchOnUrl.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Enter URL";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(514, 35);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 2;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 5;
-            this.bunifuTextBox1.TextMarginTop = 0;
-            this.bunifuTextBox1.TextPlaceholder = "Enter URL";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
+            this.txtSearchOnUrl.OnIdleState = stateProperties4;
+            this.txtSearchOnUrl.PasswordChar = '\0';
+            this.txtSearchOnUrl.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSearchOnUrl.PlaceholderText = "Enter URL";
+            this.txtSearchOnUrl.ReadOnly = false;
+            this.txtSearchOnUrl.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearchOnUrl.SelectedText = "";
+            this.txtSearchOnUrl.SelectionLength = 0;
+            this.txtSearchOnUrl.SelectionStart = 0;
+            this.txtSearchOnUrl.ShortcutsEnabled = true;
+            this.txtSearchOnUrl.Size = new System.Drawing.Size(514, 35);
+            this.txtSearchOnUrl.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtSearchOnUrl.TabIndex = 2;
+            this.txtSearchOnUrl.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSearchOnUrl.TextMarginBottom = 0;
+            this.txtSearchOnUrl.TextMarginLeft = 5;
+            this.txtSearchOnUrl.TextMarginTop = 0;
+            this.txtSearchOnUrl.TextPlaceholder = "Enter URL";
+            this.txtSearchOnUrl.UseSystemPasswordChar = false;
+            this.txtSearchOnUrl.WordWrap = true;
+            this.txtSearchOnUrl.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearchOnUrl_KeyUp);
+            // 
+            // imgRefresh
+            // 
+            this.imgRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.imgRefresh.Image = ((System.Drawing.Image)(resources.GetObject("imgRefresh.Image")));
+            this.imgRefresh.ImageActive = null;
+            this.imgRefresh.Location = new System.Drawing.Point(48, 408);
+            this.imgRefresh.Name = "imgRefresh";
+            this.imgRefresh.Size = new System.Drawing.Size(30, 30);
+            this.imgRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgRefresh.TabIndex = 8;
+            this.imgRefresh.TabStop = false;
+            this.toolTip1.SetToolTip(this.imgRefresh, "Back");
+            this.imgRefresh.Visible = false;
+            this.imgRefresh.Zoom = 10;
+            // 
+            // imgSpinner
+            // 
+            this.imgSpinner.BackColor = System.Drawing.Color.Transparent;
+            this.imgSpinner.Image = ((System.Drawing.Image)(resources.GetObject("imgSpinner.Image")));
+            this.imgSpinner.ImageActive = null;
+            this.imgSpinner.Location = new System.Drawing.Point(12, 408);
+            this.imgSpinner.Name = "imgSpinner";
+            this.imgSpinner.Size = new System.Drawing.Size(30, 30);
+            this.imgSpinner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgSpinner.TabIndex = 9;
+            this.imgSpinner.TabStop = false;
+            this.toolTip1.SetToolTip(this.imgSpinner, "Back");
+            this.imgSpinner.Visible = false;
+            this.imgSpinner.Zoom = 10;
             // 
             // frmBrowser
             // 
@@ -255,6 +295,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.imgRefresh);
+            this.Controls.Add(this.imgSpinner);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -264,10 +306,12 @@
             this.bunifuCards1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnForward)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSpinner)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,14 +319,16 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton btnRefresh;
+        private Bunifu.Framework.UI.BunifuImageButton btnForward;
+        private Bunifu.Framework.UI.BunifuImageButton btnHome;
+        private Bunifu.Framework.UI.BunifuImageButton btnBack;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtSearchOnUrl;
+        private Bunifu.Framework.UI.BunifuImageButton imgRefresh;
+        private Bunifu.Framework.UI.BunifuImageButton imgSpinner;
     }
 }
