@@ -27,7 +27,7 @@ namespace Browser
                 {
                     Content = new frmBrowser
                     {
-                        Text = "New Tab"
+                        Text = "VJ's Browser"
                     }
                 }
             );

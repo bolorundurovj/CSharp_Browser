@@ -30,7 +30,7 @@ namespace Browser
                     //The content will be an instance of another form...... Here it will be a new instance of frmBrowser
                     Content = new frmBrowser
                     {
-                        Text = "New Tab"
+                        Text = "VJ's Browser"
                     }
                 };
             }
